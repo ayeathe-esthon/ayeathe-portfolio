@@ -1,0 +1,81 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  background-color: #0a0f1ecc;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.navbar-logo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #00aaff;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar-links li {
+  cursor: pointer;
+  color: #aaaaaa;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+.navbar-links li:hover,
+.navbar-links li.active {
+  color: #00aaff;
+}
+
+.navbar-links {
+  position: relative;
+}
+
+.nav-indicator {
+  position: absolute;
+  bottom: -6px;
+  height: 2px;
+  background-color: #00aaff;
+  border-radius: 2px;
+  box-shadow: 0 0 8px #00aaff;
+  transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+  animation: none;
+}
+
+.nav-indicator.shrink {
+  transform: scaleX(0);
+  transition: transform 0.15s ease-in;
+}
+
+.nav-indicator.grow {
+  transform: scaleX(1);
+  transition: transform 0.2s ease-out,
+              left 0s,
+              width 0s;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 1.5rem;
+  }
+
+  .navbar-links {
+    gap: 1rem;
+  }
+
+  .navbar-links li {
+    font-size: 0.8rem;
+  }
+}
