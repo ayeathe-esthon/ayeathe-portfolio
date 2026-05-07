@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import './Hero.css'
-import useScrollReveal from '../hooks/useScrollReveal'
 
 const titles = ['Video Editor', 'Motion Graphics Designer', 'Content Creator']
 
@@ -8,7 +7,6 @@ function Hero() {
   const [displayed, setDisplayed] = useState('')
   const [titleIndex, setTitleIndex] = useState(0)
   const [isDeleting, setIsDeleting] = useState(false)
-  const ref = useScrollReveal()
 
   useEffect(() => {
     const current = titles[titleIndex]
@@ -38,8 +36,8 @@ function Hero() {
   }
 
   return (
-    <section id="home" ref={ref} className="hero reveal">
-      <div className="hero-content">
+        <section id="home" className="hero">      
+        <div className="hero-content">
         <p className="hero-greeting">Hi, my name is</p>
         <h1 className="hero-name">Ayeathe.</h1>
         <h2 className="hero-titles">
