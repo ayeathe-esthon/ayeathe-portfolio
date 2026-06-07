@@ -79,11 +79,15 @@
   box-shadow: 0 8px 24px #00aaff22;
 }
 
-.video-card img {
+.video-embed {
   width: 100%;
   aspect-ratio: 16 / 9;
-  object-fit: cover;
-  display: block;
+}
+
+.video-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 .video-card-info {

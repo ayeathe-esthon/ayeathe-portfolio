@@ -1,6 +1,6 @@
 import './Work.css'
 import useScrollReveal from '../hooks/useScrollReveal'
-
+import VideoPlayer from './VideoPlayer'
 
 const videos = [
   {
@@ -34,35 +34,24 @@ function Work() {
       <div className="featured-wrapper">
         <span className="featured-label">Featured</span>
         <div className="featured-video">
-          <iframe
-            src={`https://www.youtube.com/embed/${videos.find(v => v.featured).id}`}
-            title="Featured Video"
-            allowFullScreen
-            loading="lazy"
-          />
+        <VideoPlayer
+        id={videos.find(v => v.featured).id}
+        title={videos.find(v => v.featured).title}
+       />
         </div>
       </div>
 
       <div className="video-grid">
-        {videos.filter(v => !v.featured).map(video => (
-          <a
-            key={video.id}
-            href={`https://www.youtube.com/watch?v=${video.id}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="video-card"
-          >
-            <img
-              src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`}
-              alt={video.title}
-            />
-            <div className="video-card-info">
-              <span className="video-tag">{video.tag}</span>
-              <p className="video-title">{video.title}</p>
-            </div>
-          </a>
-        ))}
+  {videos.filter(v => !v.featured).map(video => (
+    <div key={video.id} className="video-card">
+      <VideoPlayer id={video.id} title={video.title} />
+      <div className="video-card-info">
+        <span className="video-tag">{video.tag}</span>
+        <p className="video-title">{video.title}</p>
       </div>
+    </div>
+  ))}
+</div>
     </section>
   )
 }

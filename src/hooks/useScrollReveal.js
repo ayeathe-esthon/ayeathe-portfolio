@@ -3,6 +3,7 @@ import { useEffect, useRef } from 'react'
 function useScrollReveal(options = {}) {
   const ref = useRef(null)
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     const el = ref.current
     if (!el) return
