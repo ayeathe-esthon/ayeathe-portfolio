@@ -113,4 +113,8 @@
   .work {
     padding: 4rem 1.5rem;
   }
+
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
 }
