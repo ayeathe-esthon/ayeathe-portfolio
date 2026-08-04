@@ -22,9 +22,9 @@ const videos = [
     featured: false
   },
   {
-    id: 'a22oypcEmZY',
-    title: 'Motion Graphics Short',
-    tag: 'Motion Graphics',
+    id: 'hkX0rKLUY4o',
+    title: 'Linear SAAS edit',
+    tag: 'SAAS edit',
     featured: false
   }
 ]
