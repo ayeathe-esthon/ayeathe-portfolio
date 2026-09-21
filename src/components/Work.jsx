@@ -4,6 +4,12 @@ import VideoPlayer from './VideoPlayer'
 
 const videos = [
   {
+    id: 'hkX0rKLUY4o',
+    title: 'Linear SAAS edit',
+    tag: 'SAAS edit',
+    featured: false
+  },
+  {
   id: 'K_e8YrL7pns',
   title: 'iPhone 17 Motion Graphics Ad',
   tag: 'Motion Graphics',
@@ -11,20 +17,14 @@ const videos = [
 },
   {
     id: 'wbEMZsbv7Js',
-    title: 'Motion Graphics Edit',
+    title: 'GoDark Motion Graphics Edit',
     tag: 'Motion Graphics',
     featured: true
   },
   {
     id: 'W9YKkftu4B4',
-    title: 'Social Media Marketing Edit',
-    tag: 'Video Editing',
-    featured: false
-  },
-  {
-    id: 'hkX0rKLUY4o',
-    title: 'Linear SAAS edit',
-    tag: 'SAAS edit',
+    title: 'Social Media Marketing Agency (SMMA) Edit',
+    tag: 'Retention Edits',
     featured: false
   }
 ]
